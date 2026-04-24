@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinding Visualizer</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .controls { margin-bottom: 20px; }
+        table { border-collapse: collapse; user-select: none; }
+        td { width: 25px; height: 25px; border: 1px solid #ccc; cursor: pointer; }
+        /* Visual States */
+        .wall { background-color: #34495e; border-color: #34495e; }
+        .start { background-color: #2ecc71; }
+        .goal { background-color: #e74c3c; }
+        .visited { background-color: #3498db; transition: background-color 0.5s ease; }
+        .path { background-color: #f1c40f; transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body>
+
+    <h1>Pathfinding Visualizer</h1>
+
+    <div class="controls">
+        <select id="algoSelect">
+            <option value="BFS">Breadth-First</option>
+            <option value="AStar">A*</option>
+        </select>
+        </select>
+        </select>
+        <button id="runBtn">Run Search</button>
+        <button id="resetBtn">Reset Board</button>
+    </div>
+
+    <div id="gridContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
